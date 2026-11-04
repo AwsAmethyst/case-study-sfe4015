@@ -15,7 +15,6 @@ resource "docker_image" "nginx" {
   keep_locally = false
 }
 
-# Run the container named scm-staging on port 8080:80
 resource "docker_container" "staging" {
   name  = "scm-staging"
   image = docker_image.nginx.image_id
